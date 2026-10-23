@@ -1,9 +1,25 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# AGENTS.md
 
-## This is NOT the Next.js you know
+Este projeto deve ser operado pelo OpenCode usando o modelo Claude configurado no arquivo `opencode.jsonc`.
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+## Contexto do projeto
+- Basear-se em `docs/ARCHITECTURE.md` para arquitetura e stack.
+- Basear-se em `specs/sign-up.md` como especificação principal da funcionalidade em desenvolvimento.
+- O escopo atual é criação de contas (`sign-up`) e não deve ampliar para outras funcionalidades.
 
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+## Regras
+- Antes de qualquer alteração, leia a arquitetura e a especificação relevante.
+- Respeite a stack definida: Next.js, React, TypeScript, Tailwind, Supabase, TRPC, React Hook Form e Shadcn.
+- Não implementar recursos fora do fluxo de sign-up.
+- Quando a tarefa for descrita como "Claude", execute a operação via OpenCode usando o modelo Claude já configurado.
+- Sempre priorizar API + validação + persistência + feedback de sucesso/erro.
 
-<!-- END:nextjs-agent-rules -->
+## Fluxo sugerido
+1. Entender o requisito da feature.
+2. Revisar `docs/ARCHITECTURE.md`.
+3. Revisar `specs/sign-up.md`.
+4. Propor ou implementar a mudança mínima necessária.
+5. Validar a solução sem expandir escopo.
+
+## Modelo
+O projeto já usa o modelo Claude via `anthropic/claude-sonnet-4-5` em `opencode.jsonc`.
