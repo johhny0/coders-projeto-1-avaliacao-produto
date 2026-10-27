@@ -1,28 +1,28 @@
-# Nome da Funcionalidade
+# Feature Name
 
-## Escopo
-TODO 
+## Scope
+TODO
 
-## Contexto
-TODO 
+## Context
+TODO
 
-## Requisitos Funcionais
-TODO 
+## Functional Requirements
+TODO
 
-## Requisitos Não Funcionais
-TODO 
+## Non-Functional Requirements
+TODO
 
-## Você deve
-TODO 
+## You Must
+TODO
 
-## Você não deve
-TODO 
+## You Must Not
+TODO
 
-## Tecnologias (Stacks)
-TODO 
+## Tech Stack
+TODO
 
-## Critérios de aceitação
-TODO 
+## Acceptance Criteria
+TODO
 
-## Resultado
-TODO 
+## Result
+TODO

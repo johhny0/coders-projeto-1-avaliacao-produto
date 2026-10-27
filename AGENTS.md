@@ -1,25 +1,40 @@
 # AGENTS.md
 
-Este projeto deve ser operado pelo OpenCode usando o modelo Claude configurado no arquivo `opencode.jsonc`.
+This project must be operated by OpenCode using the Claude model configured in `opencode.jsonc`.
 
-## Contexto do projeto
-- Basear-se em `docs/ARCHITECTURE.md` para arquitetura e stack.
-- Basear-se em `specs/sign-up.md` como especificação principal da funcionalidade em desenvolvimento.
-- O escopo atual é criação de contas (`sign-up`) e não deve ampliar para outras funcionalidades.
+## Project Context
+- Base decisions on `docs/ARCHITECTURE.md` for architecture and stack.
+- Base decisions on `specs/SIGN_UP.md` as the main specification for the feature currently in development.
+- Current scope is account creation (`sign-up`) and must not be expanded to other features.
 
-## Regras
-- Antes de qualquer alteração, leia a arquitetura e a especificação relevante.
-- Respeite a stack definida: Next.js, React, TypeScript, Tailwind, Supabase, TRPC, React Hook Form e Shadcn.
-- Não implementar recursos fora do fluxo de sign-up.
-- Quando a tarefa for descrita como "Claude", execute a operação via OpenCode usando o modelo Claude já configurado.
-- Sempre priorizar API + validação + persistência + feedback de sucesso/erro.
+## Rules
+- Before making any changes, read the architecture and relevant specification.
+- Follow the defined stack: Next.js, React, TypeScript, Tailwind, Supabase, tRPC, React Hook Form, Shadcn/UI.
+- Do not implement features outside the sign-up flow.
+- When a task is described as "Claude", execute it via OpenCode using the Claude model already configured.
+- Always prioritize API + validation + persistence + success/error feedback.
 
-## Fluxo sugerido
-1. Entender o requisito da feature.
-2. Revisar `docs/ARCHITECTURE.md`.
-3. Revisar `specs/sign-up.md`.
-4. Propor ou implementar a mudança mínima necessária.
-5. Validar a solução sem expandir escopo.
+## Suggested Flow
+1. Understand the feature requirements.
+2. Review `docs/ARCHITECTURE.md`.
+3. Review the relevant spec in `specs/`.
+4. Propose or implement the minimal change needed.
+5. Validate without expanding scope.
 
-## Modelo
-O projeto já usa o modelo Claude via `anthropic/claude-sonnet-4-5` em `opencode.jsonc`.
+## Language Policy
+- All new documents, code files, comments, variable names, function names, and UI text must be in English.
+- When creating new files, use English names.
+- Translate existing files to English when requested.
+
+## Model
+The project uses the Claude model via `anthropic/claude-sonnet-4-5` in `opencode.jsonc`.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

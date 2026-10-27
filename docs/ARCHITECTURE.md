@@ -1,29 +1,36 @@
-# Arquitetura do Projeto
+# Project Architecture
 
-## Front-End
-Vamos utilizar as bibliotecas principais: 
-- Typescript: Linguagem principal de desenvolvimento com tipagem
-- Next.js: Framework para criação e gestão de interfaces
-- React.js: Biblioteca para criação e componentização de interfaces
-- Biome: Validação/formatação/correção de código (lint)
-- TailwindCSS: Estilização
-- Date-FNS: Manipulaçao de data/hora
-- Shadcn: Componentização base (design system)
-- React Query: Criação e gestão de queries para ler dados da api e mutations para alterar dados
+## Frontend
 
-## Back-end
-Vamos utilizar as bibliotecas principais: 
-- Typescript: Linguagem principal de desenvolvimento com tipagem
-- Next.js: Framework para criação de APIS
-- Bcrypt: Hash de senhas
-- Mastra.ai: Criação e customização de agnetes internos
-- TRPC: Gestão de endpoints
+Main libraries:
 
-## Banco de Dados
-Sypabase: PostgreSQL
+- TypeScript: Primary language with type safety
+- Next.js: Framework for building and managing interfaces
+- React.js: Library for building and composing interfaces
+- Biome: Code validation, formatting, and linting
+- TailwindCSS: Styling
+- date-fns: Date and time manipulation
+- Shadcn/UI: Base component library (design system)
+- React Query: Data fetching/mutations for API calls
 
-## Infraestrutura
-Vercel: Hospedar tanto o servidor (API) quanto o cliente (SPA)
+## Backend
 
-## Automação
-N8N: Criação de fluxos automatizados
+Main libraries:
+
+- TypeScript: Primary language with type safety
+- Next.js: Framework for building APIs
+- Bcrypt: Password hashing
+- Mastra.ai: Creation and customization of internal agents
+- tRPC: Endpoint management
+
+## Database
+
+Supabase: PostgreSQL
+
+## Infrastructure
+
+Vercel: Hosting for both server (API) and client (SPA)
+
+## Automation
+
+n8n: Workflow automation
