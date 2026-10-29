@@ -1,4 +1,4 @@
-# Feedback Implementation Plan (Product Reviews)
+# Plan 3: Feedback Implementation Plan (Product Reviews)
 
 ## Objective
 Allow authenticated users to add reviews (rating 1-5 + comment). Unauthenticated users see an auth prompt. Show existing reviews on product detail page.

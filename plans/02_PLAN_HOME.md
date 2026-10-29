@@ -1,4 +1,4 @@
-# Home Implementation Plan (Product Listing)
+# Plan 2: Home Implementation Plan (Product Listing)
 
 ## Objective
 Implement product listing on the home page with infinite scroll, create `products` table, add `GET`/`POST` endpoints for products, and prepare navigation to product details.

@@ -1,4 +1,4 @@
-# Sign-In Implementation Plan (Authentication)
+# Plan 1: Sign-In Implementation Plan (Authentication)
 
 ## Objective
 Implement authentication to allow users to sign in with email and password, create sessions via cookies, show generic errors, and conditionally display the header (Sign In button vs avatar).

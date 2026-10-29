@@ -1,4 +1,4 @@
-# Plan 1: Refactor - Separate API (Backend) and App (Frontend), Apply OOP & SOLID Principles
+# Plan 4: Refactor - Separate API (Backend) and App (Frontend), Apply OOP & SOLID Principles
 
 ## Goal
 Restructure the project to clearly separate backend (API) from frontend (App), follow Object-Oriented Programming (OOP) best practices with proper separation of concerns, apply SOLID principles rigorously, avoid code duplication, and organize in a scalable, maintainable way - without changing existing behavior for the sign-up flow.
