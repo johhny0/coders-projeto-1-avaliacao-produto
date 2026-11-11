@@ -6,4 +6,5 @@ export interface IProductController {
   create(req: NextRequest): Promise<NextResponse>;
   update(req: NextRequest, id: string): Promise<NextResponse>;
   delete(req: NextRequest, id: string): Promise<NextResponse>;
+  getReviewSummary(req: NextRequest, id: string): Promise<NextResponse>;
 }

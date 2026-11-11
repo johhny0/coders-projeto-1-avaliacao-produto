@@ -3,18 +3,22 @@ import { createProductController } from "@/api/products";
 
 const controller = createProductController();
 
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
-  return controller.getById(req, params.id);
+export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  return controller.getById(req, id);
 }
 
-export async function PUT(req: NextRequest, { params }: { params: { id: string } }) {
-  return controller.update(req, params.id);
+export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  return controller.update(req, id);
 }
 
-export async function PATCH(req: NextRequest, { params }: { params: { id: string } }) {
-  return controller.update(req, params.id);
+export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  return controller.update(req, id);
 }
 
-export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
-  return controller.delete(req, params.id);
+export async function DELETE(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  return controller.delete(req, id);
 }

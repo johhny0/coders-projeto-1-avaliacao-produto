@@ -72,4 +72,19 @@ export class ProductController implements IProductController {
       return NextResponse.json({ error: "Erro ao remover produto" }, { status: 400 });
     }
   }
+
+  async getReviewSummary(req: NextRequest, id: string): Promise<NextResponse> {
+    try {
+      const result = await this.productService.generateReviewSummary(id);
+      return NextResponse.json(result, { status: 200 });
+    } catch (error) {
+      if (error instanceof AppError) {
+        if (error.statusCode === 204) {
+          return NextResponse.json({}, { status: 204 });
+        }
+        return NextResponse.json({ error: error.message }, { status: error.statusCode });
+      }
+      return NextResponse.json({ error: "Erro ao gerar resumo" }, { status: 500 });
+    }
+  }
 }

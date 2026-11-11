@@ -1,4 +1,5 @@
 import { ProductRepository } from "@/api/products/repositories/ProductRepository";
+import { ReviewSummaryRepository } from "@/api/products/repositories/ReviewSummaryRepository";
 import { ProductValidator } from "@/api/products/validators/ProductValidator";
 import { ProductService } from "@/api/products/services/ProductService";
 import { ProductController } from "@/api/products/controllers/ProductController";
@@ -8,8 +9,15 @@ import { supabaseAdmin } from "@/lib/supabase/server";
 
 export function createProductController() {
   const repository = new ProductRepository(supabaseAdmin);
+  const reviewSummaryRepository = new ReviewSummaryRepository(supabaseAdmin);
   const validator = new ProductValidator();
-  const service = new ProductService(repository, validator, idGenerator, dateService);
+  const service = new ProductService(
+    repository,
+    reviewSummaryRepository,
+    validator,
+    idGenerator,
+    dateService,
+  );
   const controller = new ProductController(service);
   return controller;
 }
@@ -17,4 +25,5 @@ export function createProductController() {
 export { ProductController } from "@/api/products/controllers/ProductController";
 export { ProductService } from "@/api/products/services/ProductService";
 export { ProductRepository } from "@/api/products/repositories/ProductRepository";
+export { ReviewSummaryRepository } from "@/api/products/repositories/ReviewSummaryRepository";
 export { ProductValidator } from "@/api/products/validators/ProductValidator";

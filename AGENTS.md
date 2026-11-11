@@ -4,13 +4,12 @@ This project must be operated by OpenCode using the Claude model configured in `
 
 ## Project Context
 - Base decisions on `docs/ARCHITECTURE.md` for architecture and stack.
-- Base decisions on `specs/SIGN_UP.md` as the main specification for the feature currently in development.
-- Current scope is account creation (`sign-up`) and must not be expanded to other features.
+- Use previous plans `plans/*md` and specs `specs/*.md` for futures decisions
 
 ## Rules
 - Before making any changes, read the architecture and relevant specification.
 - Follow the defined stack: Next.js, React, TypeScript, Tailwind, Supabase, tRPC, React Hook Form, Shadcn/UI.
-- Do not implement features outside the sign-up flow.
+- Do not implement features outside the requested.
 - When a task is described as "Claude", execute it via OpenCode using the Claude model already configured.
 - Always prioritize API + validation + persistence + success/error feedback.
 

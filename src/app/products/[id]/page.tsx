@@ -7,6 +7,9 @@ import { getSession } from "@/lib/auth/session";
 import { FeedbackList } from "@/components/feedback/feedback-list";
 import { FeedbackForm } from "@/components/feedback/feedback-form";
 import { AuthRequired } from "@/components/feedback/auth-required";
+import { ProductDescription } from "@/components/products/product-description";
+import { ReviewSummary } from "@/components/products/review-summary";
+import { ReviewRatingSummary } from "@/components/products/review-rating-summary";
 
 interface ProductDetailPageProps {
   params: Promise<{
@@ -53,16 +56,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
     return (
       <div className="flex min-h-dvh flex-col bg-paper">
         <div className="mx-auto flex w-full max-w-[800px] flex-1 flex-col px-6 md:px-10">
-            <Header
-              action={
-              <Link
-                href="/"
-                className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
-              >
-                Voltar
-              </Link>
-              }
-            />
+            <Header/>
           <main className="flex flex-1 items-center justify-center py-12">
             <div className="text-center">
               <h1 className="font-display text-2xl font-bold text-ink">
@@ -87,16 +81,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
   return (
     <div className="flex min-h-dvh flex-col bg-paper">
       <div className="mx-auto flex w-full max-w-[800px] flex-1 flex-col px-6 md:px-10">
-        <Header
-          action={
-            <Link
-              href="/"
-              className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
-            >
-              Voltar
-            </Link>
-          }
-        />
+        <Header/>
 
         <main className="flex-1 py-10 md:py-14">
           <article>
@@ -113,9 +98,10 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
               {product.name}
             </h1>
             {product.description ? (
-              <p className="mt-6 text-[16px] leading-[1.75] text-graphite">
-                {product.description}
-              </p>
+              <ProductDescription
+                description={product.description}
+                className="mt-6 text-[16px] leading-[1.75] text-graphite"
+              />
             ) : null}
             {product.external_link ? (
               <div className="mt-8">
@@ -130,6 +116,10 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
               </div>
             ) : null}
           </article>
+
+          <ReviewSummary productId={id} />
+
+          <ReviewRatingSummary scores={feedbacks.map((feedback) => feedback.score)} />
 
           <FeedbackList feedbacks={feedbacks} />
 

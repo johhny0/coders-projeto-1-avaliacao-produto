@@ -10,12 +10,6 @@ export default function Loading() {
           <Link href="/" className="font-display font-bold text-ink">
             Avalia
           </Link>
-          <Link
-            href="/"
-            className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
-          >
-            Voltar
-          </Link>
         </header>
 
         <main className="flex-1 space-y-6 py-10 md:py-14">

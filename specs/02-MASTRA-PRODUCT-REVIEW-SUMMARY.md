@@ -33,7 +33,7 @@ Add an AI-powered summary section on the product page between product descriptio
 - Add manual generate button
 - Render section when no reviews with comments
 - Put business logic in route handlers
-- Store summaries in database
+- Store summaries in database without invalidating them when new reviews are added (see `specs/03-REVIEW-SUMMARY-PERSISTENCE.md`)
 
 ## Tech Stack
 Next.js, TypeScript, Tailwind, Shadcn/UI, Mastra, OpenRouter, Supabase

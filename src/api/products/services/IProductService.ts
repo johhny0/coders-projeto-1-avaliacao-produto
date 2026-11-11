@@ -8,4 +8,5 @@ export interface IProductService {
   create(data: unknown): Promise<ProductResponseDTO>;
   update(id: string, data: unknown): Promise<ProductResponseDTO>;
   delete(id: string): Promise<void>;
+  generateReviewSummary(productId: string): Promise<{ summary: string }>;
 }
